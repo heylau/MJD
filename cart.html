@@ -12,15 +12,370 @@
              padding: 0;
          }
 
+         .c_header h3{
+             height: 44px;
+             line-height: 44px;
+             text-align: center;
+         }
+
+         .safe_tip {
+             height: 33px;
+             background-color: #fff;
+             border-bottom: 1px solid #ccc;
+         }
+         .safe_tip p{
+             height: 33px;
+             line-height: 33px;
+             text-align: center;
+             font-size: 13px;
+             position: relative;
+             margin-left: 20px;
+         }
+
+         .safe_tip p::before{
+             content: '';
+             display: inline-block;
+             background: url("images/safe_icon.png") no-repeat;
+             background-size: 18px 18px;
+             width: 18px;
+             height: 18px;
+             position: absolute;
+             left: 58px;
+             top: 7px;
+         }
+
+         #main .item{
+             margin-top: 20px;
+             background-color: #fff;
+         }
+
+         #main .item .header{
+             position: relative;
+             padding-left: 55px;
+             height: 34px;
+             line-height: 34px;
+             border-top: 1px solid #ccc;
+             border-bottom: 1px solid #ccc;
+         }
+
+         #main .item .header span{
+             display: inline-block;
+
+         }
+
+         .j_check{
+             background: url("images/shop-icon.png");
+             background-size: 50px 100px;
+             width: 20px;
+             height: 20px;
+             position: absolute;
+             left: 5px;
+             top: 7px;
+         }
+         #main .item .j_logo{
+             background: url("images/buy-logo.png");
+             background-size: 16px 16px;
+             width: 16px;
+             height: 16px;
+             position: absolute;
+             left: 30px;
+             top: 9px;
+
+         }
+
+         #main .item .j_word{
+             font-size: 14px;
+         }
+
+         #main .item .j_ems{
+             float: right;
+             margin-right: 10px;
+             color: red;
+         }
+
+         #main .product{
+             padding-top:10px;
+             padding-left: 20px;
+             position: relative;
+
+         }
+         #main .product img{
+             width: 30%;
+             height: 30%;
+             float: left;
+         }
+
+         #main .product_title{
+             display: inline-block;
+             width: 67%;
+             font-size: 15px;
+             display: -webkit-box;
+             -webkit-box-orient: vertical;
+             -webkit-line-clamp: 2;
+             overflow: hidden;
+             float: left;
+             color:#666;
+         }
+
+         #main .product_money{
+             display: inline-block;
+             color: red;
+             width: 70%;
+             margin-top: 10px;
+             margin-bottom: 10px;
+         }
+
+         #main .product_minus,.product_plus{
+             display: inline-block;
+             width: 20px;
+             height: 20px;
+             border: 1px solid #ccc;
+             text-align: center;
+             line-height: 20px;
+         }
+         #main .product_count{
+             height: 20px;
+             border: 1px solid #ccc;
+             width: 15%;
+         }
+         #main .product_trash{
+             width: 17px;
+             height: 17px;
+             position: absolute;
+             right: 10px;
+             bottom: 15px;
+         }
+         #main .product_trash_top{
+             position: absolute;
+             left: 0;
+             top: 0;
+             background: url("images/delete_up.png");
+             background-size: 17px 4px;
+             width: 17px;
+             height: 4px;
+         }
+
+         #main .product_trash_down{
+             position: absolute;
+             left: 0;
+             top: 1px;
+             background: url("images/delete_down.png");
+             background-size: 17px 17px;
+             width: 17px;
+             height: 17px;
+         }
+
+         #main .product .j_check{
+             top: 30px;
+
+         }
+
+
+
+         .jump{
+             animation: jump 1s ease;
+         }
+
+         @keyframes jump {
+             0%{
+                 opacity: 0;
+                 transform: translateY(-3000px);
+                 -webkit-transform: translateY(-3000px);
+             }
+
+             65%{
+                 opacity: 1;
+                 transform: translateY(30px);
+                 -webkit-transform: translateY(30px);
+             }
+
+             85%{
+                 transform: translateY(-5px);
+                 -webkit-transform: translateY(-5px);
+             }
+
+             100%{
+                 opacity: 1;
+                 transform: none;
+                 -webkit-transform: none;
+             }
+         }
+
+         #maskBox {
+             position: fixed;
+             left: 0;
+             top: 0;
+             background: rgba(0,0,0,0.5);
+             width: 100%;
+             height: 100%;
+             z-index: 999;
+             display: none;
+         }
+
+         #maskBox .panel{
+             background-color: #fff;
+             width: 80%;
+             margin-left: 10%;
+             height: 30%;
+             margin-top: 50%;
+             border-radius: 5px;
+             padding: 20px;
+             text-align: center;
+         }
+
+         #maskBox p{
+             text-align: center;
+             padding-bottom: 30px;
+             border-bottom: 1px solid #ccc;
+             font-size: 18px;
+             margin-bottom: 20px;
+         }
+
+         #maskBox span {
+             cursor: pointer;
+             display: inline-block;
+             width: 45%;
+             border: 1px solid #ccc;
+             padding: 5%;
+             border-radius: 5px;
+         }
+
+         #maskBox .confirm{
+             background-color:red;
+             color: #fff;
+         }
+         
+         .j_check[selected]{
+             background-position: -25px 0;
+         }
+
 
      </style>
 </head>
 <body>
+<div id="maskBox">
+    <div class="panel">
+        <p>您确定删除这个商品吗?</p>
+        <span class="cancel">取消</span>
+        <span class="confirm">确定</span>
+    </div>
+</div>
 <header class="c_header">
     <a href="index.html" class="icon_return"></a>
     <h3>购物车</h3>
     <a href="" class="icon_more"></a>
 </header>
+<section class="safe_tip">
+    <p>您正在安全购物环境中,请放心购物</p>
+</section>
+<main id="main">
+    <div class="item">
+        <div class="header">
+            <span class="j_check" ></span>
+            <span class="j_logo"></span>
+            <span class="j_word">京东自营</span>
+            <span class="j_ems">您享受满100元免运费服务</span>
+        </div>
+        <div class="product clearfix">
+            <span class="j_check" selected></span>
+            <img src="images/buy-pro1.jpg" alt="" >
+            <span class="product_title">玥明子2017春秋新款韩版加肥加大码女装胖MM胖妹妹秋装胖人显瘦毛衣外套中长款打底连衣裙女 黑色 XXXL 150-168斤左右</span>
+            <span class="product_money">&yen;8888.88</span>
+            <span class="product_minus">-</span>
+            <input type="tel" class="product_count">
+            <span class="product_plus">+</span>
+            <div class="product_trash">
+                <span class="product_trash_top"></span>
+                <span class="product_trash_down"></span>
+            </div>
+        </div>
+        <div class="product clearfix">
+            <span class="j_check" selected></span>
+            <img src="images/buy-pro1.jpg" alt="" >
+            <span class="product_title">玥明子2017春秋新款韩版加肥加大码女装胖MM胖妹妹秋装胖人显瘦毛衣外套中长款打底连衣裙女 黑色 XXXL 150-168斤左右</span>
+            <span class="product_money">&yen;8888.88</span>
+            <span class="product_minus">-</span>
+            <input type="tel" class="product_count">
+            <span class="product_plus">+</span>
+            <div class="product_trash">
+                <span class="product_trash_top"></span>
+                <span class="product_trash_down"></span>
+            </div>
+        </div>
+        <div class="product clearfix">
+            <span class="j_check" selected></span>
+            <img src="images/buy-pro1.jpg" alt="" >
+            <span class="product_title">玥明子2017春秋新款韩版加肥加大码女装胖MM胖妹妹秋装胖人显瘦毛衣外套中长款打底连衣裙女 黑色 XXXL 150-168斤左右</span>
+            <span class="product_money">&yen;8888.88</span>
+            <span class="product_minus">-</span>
+            <input type="tel" class="product_count">
+            <span class="product_plus">+</span>
+            <div class="product_trash">
+                <span class="product_trash_top"></span>
+                <span class="product_trash_down"></span>
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="header">
+            <span class="j_check" ></span>
+            <span class="j_logo"></span>
+            <span class="j_word">京东自营</span>
+            <span class="j_ems">您享受满100元免运费服务</span>
+        </div>
+        <div class="product clearfix">
+            <span class="j_check" selected></span>
+            <img src="images/buy-pro1.jpg" alt="" >
+            <span class="product_title">玥明子2017春秋新款韩版加肥加大码女装胖MM胖妹妹秋装胖人显瘦毛衣外套中长款打底连衣裙女 黑色 XXXL 150-168斤左右</span>
+            <span class="product_money">&yen;8888.88</span>
+            <span class="product_minus">-</span>
+            <input type="tel" class="product_count">
+            <span class="product_plus">+</span>
+            <div class="product_trash">
+                <span class="product_trash_top"></span>
+                <span class="product_trash_down"></span>
+            </div>
+        </div>
+        <div class="product clearfix">
+            <span class="j_check" selected></span>
+            <img src="images/buy-pro1.jpg" alt="" >
+            <span class="product_title">玥明子2017春秋新款韩版加肥加大码女装胖MM胖妹妹秋装胖人显瘦毛衣外套中长款打底连衣裙女 黑色 XXXL 150-168斤左右</span>
+            <span class="product_money">&yen;8888.88</span>
+            <span class="product_minus">-</span>
+            <input type="tel" class="product_count">
+            <span class="product_plus">+</span>
+            <div class="product_trash">
+                <span class="product_trash_top"></span>
+                <span class="product_trash_down"></span>
+            </div>
+        </div>
 
+    </div>
+    <div class="item">
+        <div class="header">
+            <span class="j_check" ></span>
+            <span class="j_logo"></span>
+            <span class="j_word">京东自营</span>
+            <span class="j_ems">您享受满100元免运费服务</span>
+        </div>
+        <div class="product clearfix">
+            <span class="j_check" selected></span>
+            <img src="images/buy-pro1.jpg" alt="" >
+            <span class="product_title">玥明子2017春秋新款韩版加肥加大码女装胖MM胖妹妹秋装胖人显瘦毛衣外套中长款打底连衣裙女 黑色 XXXL 150-168斤左右</span>
+            <span class="product_money">&yen;8888.88</span>
+            <span class="product_minus">-</span>
+            <input type="tel" class="product_count">
+            <span class="product_plus">+</span>
+            <div class="product_trash">
+                <span class="product_trash_top"></span>
+                <span class="product_trash_down"></span>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<script src="js/common.js"></script>
+<script src="js/cart.js"></script>
 </body>
 </html>

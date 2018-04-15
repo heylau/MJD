@@ -2,6 +2,9 @@
  * Created by heylau on 2018/4/13.
  */
 (function () {
+
+    var c_btn = document.getElementsByClassName('categoryBtn')[0];
+    c_btn.style.src = 'images/categoty_icon.png';
     var list = document.getElementsByClassName('c_list')[0];
     var maxY = 0;
     var minY = - (list.clientHeight - document.getElementsByClassName('c_left')[0].clientHeight);

@@ -50,7 +50,8 @@ input{
 
 
 .c_header {
-    background-color: #fff;
+    background: url("../images/header-bg.png") repeat-x;
+    background-size: 1px 44px;
     border-bottom: 1px solid #ccc;
 }
 .c_header form{
