@@ -1,0 +1,337 @@
+
+
+#jd_box{
+    min-width: 300px;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#jd_header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(201, 21, 35, 0);
+    width: 100%;
+    height: 44px;
+    z-index: 99999;
+
+}
+
+#jd_header .icon_logo{
+    width: 60px;
+    height: 30px;
+    position: absolute;
+    top: 5px;
+    left: 7px;
+
+    background-position: 0 -103px;
+    z-index: 999;
+
+}
+
+
+#jd_header form{
+    width: 80%;
+    position: absolute;
+    height: 70%;
+    top: 5px;
+    padding-left: 70px;
+}
+
+#jd_header a:nth-last-child(1){
+    position: absolute;
+    right: 5px;
+    top: 12px;
+}
+
+#jd_header input {
+    width: 100%;
+    height: 100%;
+    padding-left: 30px;
+    border-radius: 15px;
+}
+
+
+#main{
+    padding-bottom: 70px;
+}
+#main .jd_banner{
+    position: relative;
+    overflow: hidden;
+
+}
+#main .jd_banner_list {
+    width: 1000%;
+    transform: translateX(-10%);
+}
+#main>section{
+    border: 1px solid #ddd;
+}
+#main>section:nth-of-type(1),#main>section:nth-of-type(2),#main>section:nth-last-child(1){
+    border: none;
+}
+#main .jd_banner_list li{
+    width: 10%;
+    float: left;
+}
+
+#main .jd_banner_list li img{
+    width: 100%;
+}
+
+#main .jd_banner_list li a{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+#main .jd_banner ol{
+    width: 128px;
+    height: 6px;
+    left: 50%;
+    margin-left: -64px;
+    bottom: 10px;
+    position: absolute;
+}
+
+#main .jd_banner ol li{
+    width: 6px;
+    height: 6px;
+    margin-left:8px;
+    border: 1px solid #fff;
+    border-radius: 50% ;
+    float: left;
+
+}
+#main .jd_banner ol li.current{
+    background-color: #fff;
+}
+#main .jd_nav{
+
+    background-color: #fff;
+    margin-top: -2px;
+    padding: 10px 0;
+}
+
+#main .jd_nav ul li{
+    float: left;
+    width: 20%;
+    text-align: center;
+}
+
+#main .jd_nav ul li img{
+    width: 60%;
+}
+
+#main .jd_nav ul li p{
+    font-size: 13px;
+}
+
+#main .jd_seckill{
+    width: 95%;
+    margin: 10px auto;
+
+    background-color: #fff;
+    position: relative;
+}
+#main .jd_seckill .title{
+    height: 30px;
+    position: relative;
+}
+#main .jd_seckill img{
+    width: 20%;
+}
+#main .jd_seckill  i{
+    font-size: 14px;
+    font-weight: 500;
+}
+#main .jd_seckill  i,span{
+    position: relative;
+    top: -10px;
+    margin-left: 5px;
+}
+#main .jd_seckill span{
+    padding: 2px;
+    background-color: #000;
+    color: #fff;
+}
+#main .jd_seckill span:nth-of-type(3n){
+    background-color: #fff;
+    color: #000;
+}
+#main .jd_seckill a{
+    color: red;
+    position: absolute;
+    right: 20px;
+    top: 8px;
+}
+
+#main .jd_seckill a::after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: url(../images/arrow_rt.png) no-repeat;
+    background-size: 12px 12px;
+    position: absolute;
+    top: 3px;
+    right: -13px;
+}
+#main .jd_seckill .content{
+}
+
+#main .jd_seckill .content ul {
+}
+#main .jd_seckill .content ul li {
+    width: 33%;
+    float: left;
+    text-align: center;
+    border-right: 1px solid #ccc;
+    padding-bottom: 10px;
+
+}
+
+#main .jd_seckill .content ul li:nth-last-child(1){
+    border-right:none;
+}
+
+#main  .content ul li a{
+    width: 10%;
+}
+
+#main  .content ul li img{
+    width: 70%;
+}
+
+
+#main  .content p:nth-of-type(1){
+    color: red;
+    font-size: 14px;
+}
+
+#main  .content p:nth-of-type(2){
+    color: #666;
+    text-decoration: line-through;
+}
+#main .jd_funbuy {
+    width: 95%;
+    margin: 10px auto;
+    background-color: #fff;
+}
+#main .jd_funbuy .title{
+    height: 40px;
+    line-height: 40px;
+}
+#main .jd_funbuy li{
+    border-top: 1px solid #ccc;
+    float: left;
+    width:49%;
+}
+#main .jd_funbuy li:nth-of-type(1){
+    border-right: 1px solid #ccc;
+}
+#main .jd_funbuy .content li img{
+    width: 100%;
+}
+#main .jd_funbuy h3{
+    margin-left: 13px;
+    position: relative;
+    color: #666666;
+}
+#main .jd_funbuy h3::before{
+    content: '';
+    width: 5px  ;
+    height: 20px;
+    background-color: red;
+    position: absolute;
+    top: 10px;
+    left: -10px;
+}
+
+.pull-left{
+    float: left;
+}
+.pull-right{
+    float: right;
+}
+
+
+#main .jd_product ul li{
+    width: 48%;
+    float: left;
+    text-align: center;
+    background-color: #fff;
+    margin-top: 10px;
+}
+#main .jd_product ul li:nth-of-type(2n){
+    margin-left: 4%;
+}
+#main .jd_product a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+#main .jd_product ul li img{
+    width: 95%;
+}
+#main .jd_product ul li a{
+    color: #666;
+}
+
+#main .jd_product ul div a:nth-of-type(1) span{
+    float: left;
+    margin-top: 18px;
+    color: red;
+}
+#main .jd_product ul div a:nth-of-type(2){
+    float: right;
+    width: 45px;
+    height: 18px;
+    text-align: center;
+    margin-top: -30px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px ;
+
+}
+
+#main .jd_product .product_title{
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    position: relative;
+}
+#main .jd_product .product_title span{
+    position: absolute;
+    left: 38%;
+    background-color: #f5f5f5;
+    padding: 0 20px;
+}
+
+#jd_footer{
+    border-top: 1px solid #eee;
+    width: 100%;
+    box-shadow: 0 2px 10px ;
+
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: #fff;
+    height: 55px;
+}
+
+#jd_footer ul li{
+    width: 20%;
+    float: left;
+    text-align: center;
+}
+
+#jd_footer ul li img{
+    width: 100%;
+}
+
+@media (min-width:600px){
+    #jd_footer ul li img{
+        width: 30%;
+    }
+}
