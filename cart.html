@@ -72,6 +72,9 @@
              left: 5px;
              top: 7px;
          }
+         #main{
+             overflow: hidden;
+         }
          #main .item .j_logo{
              background: url("images/buy-logo.png");
              background-size: 16px 16px;
@@ -97,6 +100,7 @@
              padding-top:10px;
              padding-left: 20px;
              position: relative;
+             border-bottom: 1px solid #ccc;
 
          }
          #main .product img{
@@ -250,6 +254,17 @@
          }
 
 
+         #main .deleteBtn{
+             width: 100px;
+             position: absolute;
+             right: -100px;
+             bottom: 0;
+             height: 100%;
+             background-color: red;
+             text-align: center;
+             padding-top: 13%;
+         }
+
      </style>
 </head>
 <body>
@@ -271,7 +286,7 @@
 <main id="main">
     <div class="item">
         <div class="header">
-            <span class="j_check" ></span>
+            <span class="j_check mainCheck" ></span>
             <span class="j_logo"></span>
             <span class="j_word">京东自营</span>
             <span class="j_ems">您享受满100元免运费服务</span>
@@ -288,6 +303,7 @@
                 <span class="product_trash_top"></span>
                 <span class="product_trash_down"></span>
             </div>
+                <p class="deleteBtn">删除</p>
         </div>
         <div class="product clearfix">
             <span class="j_check" selected></span>
@@ -301,6 +317,7 @@
                 <span class="product_trash_top"></span>
                 <span class="product_trash_down"></span>
             </div>
+            <p class="deleteBtn">删除</p>
         </div>
         <div class="product clearfix">
             <span class="j_check" selected></span>
@@ -314,46 +331,14 @@
                 <span class="product_trash_top"></span>
                 <span class="product_trash_down"></span>
             </div>
+            <p class="deleteBtn">删除</p>
         </div>
-    </div>
-    <div class="item">
-        <div class="header">
-            <span class="j_check" ></span>
-            <span class="j_logo"></span>
-            <span class="j_word">京东自营</span>
-            <span class="j_ems">您享受满100元免运费服务</span>
-        </div>
-        <div class="product clearfix">
-            <span class="j_check" selected></span>
-            <img src="images/buy-pro1.jpg" alt="" >
-            <span class="product_title">玥明子2017春秋新款韩版加肥加大码女装胖MM胖妹妹秋装胖人显瘦毛衣外套中长款打底连衣裙女 黑色 XXXL 150-168斤左右</span>
-            <span class="product_money">&yen;8888.88</span>
-            <span class="product_minus">-</span>
-            <input type="tel" class="product_count">
-            <span class="product_plus">+</span>
-            <div class="product_trash">
-                <span class="product_trash_top"></span>
-                <span class="product_trash_down"></span>
-            </div>
-        </div>
-        <div class="product clearfix">
-            <span class="j_check" selected></span>
-            <img src="images/buy-pro1.jpg" alt="" >
-            <span class="product_title">玥明子2017春秋新款韩版加肥加大码女装胖MM胖妹妹秋装胖人显瘦毛衣外套中长款打底连衣裙女 黑色 XXXL 150-168斤左右</span>
-            <span class="product_money">&yen;8888.88</span>
-            <span class="product_minus">-</span>
-            <input type="tel" class="product_count">
-            <span class="product_plus">+</span>
-            <div class="product_trash">
-                <span class="product_trash_top"></span>
-                <span class="product_trash_down"></span>
-            </div>
-        </div>
+
 
     </div>
     <div class="item">
         <div class="header">
-            <span class="j_check" ></span>
+            <span class="j_check mainCheck" ></span>
             <span class="j_logo"></span>
             <span class="j_word">京东自营</span>
             <span class="j_ems">您享受满100元免运费服务</span>
@@ -370,9 +355,53 @@
                 <span class="product_trash_top"></span>
                 <span class="product_trash_down"></span>
             </div>
+            <p class="deleteBtn">删除</p>
+        </div>
+        <div class="product clearfix">
+            <span class="j_check" selected></span>
+            <img src="images/buy-pro1.jpg" alt="" >
+            <span class="product_title">玥明子2017春秋新款韩版加肥加大码女装胖MM胖妹妹秋装胖人显瘦毛衣外套中长款打底连衣裙女 黑色 XXXL 150-168斤左右</span>
+            <span class="product_money">&yen;8888.88</span>
+            <span class="product_minus">-</span>
+            <input type="tel" class="product_count">
+            <span class="product_plus">+</span>
+            <div class="product_trash">
+                <span class="product_trash_top"></span>
+                <span class="product_trash_down"></span>
+            </div>
+            <p class="deleteBtn">删除</p>
         </div>
 
+
+
     </div>
+
+    <div class="item">
+        <div class="header">
+            <span class="j_check mainCheck" ></span>
+            <span class="j_logo"></span>
+            <span class="j_word">京东自营</span>
+            <span class="j_ems">您享受满100元免运费服务</span>
+        </div>
+        <div class="product clearfix">
+            <span class="j_check" selected></span>
+            <img src="images/buy-pro1.jpg" alt="" >
+            <span class="product_title">玥明子2017春秋新款韩版加肥加大码女装胖MM胖妹妹秋装胖人显瘦毛衣外套中长款打底连衣裙女 黑色 XXXL 150-168斤左右</span>
+            <span class="product_money">&yen;8888.88</span>
+            <span class="product_minus">-</span>
+            <input type="tel" class="product_count">
+            <span class="product_plus">+</span>
+            <div class="product_trash">
+                <span class="product_trash_top"></span>
+                <span class="product_trash_down"></span>
+            </div>
+            <p class="deleteBtn">删除</p>
+        </div>
+
+
+
+    </div>
+
 </main>
 
 <script src="js/common.js"></script>
